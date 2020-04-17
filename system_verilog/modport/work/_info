@@ -1,0 +1,125 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/home/zhouwt/EECS_Verification1906-master/system_verilog/modport
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+Ymem_if
+Z1 DXx6 sv_std 3 std 0 22 `a<MJET1=lN@jzbA7kHm;1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+31
+IRQDA[GioQ_Y5PQPk3V??k1
+Z3 !s105 modport_sv_unit
+S1
+Z4 d/home/zhouwt/EECS_Verification1906-master/system_verilog/modport
+Z5 w1585654175
+Z6 8modport.sv
+Z7 Fmodport.sv
+L0 5
+Z8 OL;L;10.2c;57
+Z9 !s108 1585654512.351834
+Z10 !s107 modport.sv|
+Z11 !s90 -sv|+define+ASSERT|modport.sv|-l|sim.log|
+Z12 o-sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z13 !s92 -sv +define+ASSERT -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s85 0
+!i10b 1
+!s100 =COkkcD=:zaDUbe9@n2A`2
+!i111 0
+vmemory_ctrl
+R1
+R2
+r1
+31
+IX0k2D_N1TAjV2==<LRZ;F3
+R3
+S1
+R4
+R5
+R6
+R7
+L0 79
+R8
+R9
+R10
+R11
+R12
+R13
+!s85 0
+!i10b 1
+!s100 aCdS5Ia]^kP4i5kg5WR7D1
+!i111 0
+vmemory_model
+R1
+R2
+r1
+31
+IY?RS;2=C6Q2NVbNm]HJN=3
+R3
+S1
+R4
+R5
+R6
+R7
+L0 51
+R8
+R9
+R10
+R11
+R12
+R13
+!s85 0
+!i10b 1
+!s100 OcI:j]NI_`9GR4hEN>_7_2
+!i111 0
+4test
+R1
+R2
+r1
+!s85 0
+31
+I;=D1P`g79m@mZF37jO<8@3
+R3
+S1
+R4
+R5
+R6
+R7
+L0 143
+R8
+R9
+R10
+R11
+R12
+R13
+!i10b 1
+!s100 6;nUFL>bm>L5:LHTJgFCL0
+!i111 0
+vtop
+R1
+R2
+r1
+31
+IUU8NZ@K:7V;T<jb_<o]7_2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 185
+R8
+R9
+R10
+R11
+R12
+R13
+!s85 0
+!i10b 1
+!s100 GoH??0k:h:[UUamKIHL:61
+!i111 0

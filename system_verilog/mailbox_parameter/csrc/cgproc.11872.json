@@ -1,0 +1,91 @@
+{
+    "reusePaths": {},
+    "Modules": {
+        "vcs_paramclassrepository": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "...MASTER...": {},
+        "tb": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "_vcs_unit__2444631337": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "bytes": 7607,
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "hEeZs_d": {
+            "mod": "vcs_paramclassrepository",
+            "out": "hEeZs_d.o",
+            "archive": "archive.0/_11872_archive_1.a",
+            "bytes": 9994,
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "jNxLu_d": {
+            "mod": "_vcs_unit__2444631337",
+            "out": "jNxLu_d.o",
+            "archive": "archive.0/_11872_archive_1.a",
+            "bytes": 22628,
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "g7hgQ_d": {
+            "mod": "tb",
+            "out": "g7hgQ_d.o",
+            "archive": "archive.0/_11872_archive_1.a",
+            "bytes": 13406,
+            "mode": 4,
+            "checksum": 4294967295
+        },
+        "reYIK_d": {
+            "mod": "std",
+            "out": "reYIK_d.o",
+            "archive": "archive.0/_11872_archive_1.a",
+            "bytes": 28569,
+            "mode": 4,
+            "checksum": 4294967295
+        }
+    },
+    "ObjArchives": [
+        {
+            "size": 133090,
+            "archive": "archive.0/_11872_archive_1.a",
+            "objects": [
+                [
+                    "hEeZs_d.o",
+                    9994
+                ],
+                [
+                    "jNxLu_d.o",
+                    22628
+                ],
+                [
+                    "reYIK_d.o",
+                    28569
+                ],
+                [
+                    "g7hgQ_d.o",
+                    13406
+                ],
+                [
+                    "amcQwB.o",
+                    58493
+                ]
+            ]
+        }
+    ]
+}

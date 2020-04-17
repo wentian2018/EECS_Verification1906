@@ -2,7 +2,7 @@
 //---------------------//
 
 
-interface mem_if (input wire clk)
+interface mem_if (input wire clk);
   logic  reset;
   logic we_sys;
   logic cmd_valid_sys;
@@ -20,7 +20,7 @@ interface mem_if (input wire clk)
   //    modport fo memory controller endinterface  //
   //-----------------------------------------------//
 
-  modport ctrl (input clk,reset,we_sys,cmd_valid_sys,addr_sys,datao_mem
+  modport ctrl (input clk,reset,we_sys,cmd_valid_sys,addr_sys,datao_mem,
                 output we_mem,ce_mem,addr_mem,datai_mem,ready_sys,ref data_sys );
 
 
@@ -29,7 +29,7 @@ interface mem_if (input wire clk)
   //    modport fo memory model endinterface  //
   //-----------------------------------------------//
 
-  modport memory (input clk,reset,we_mem,ce_mem,addr_mem,datai_mem
+  modport memory (input clk,reset,we_mem,ce_mem,addr_mem,datai_mem,
                   output datao_mem);
 
 
@@ -78,7 +78,7 @@ endinterface
 
 module memory_ctrl (mem_if.ctrl cif);
 
-  typedef enmu {IDLE,WRITE,READ,DONE} fsm_t;
+  typedef enum {IDLE,WRITE,READ,DONE} fsm_t;
 
   fsm_t state;
 
@@ -140,7 +140,7 @@ module memory_ctrl (mem_if.ctrl cif);
   end
 endmodule // memory_ctrl
 
-  program test (mem_if.test tif)
+  program test (mem_if.test tif);
     initial begin
       tif.reset <= 1 ;
       tif.we_sys <= 0 ;
@@ -194,7 +194,7 @@ endmodule // memory_ctrl
     mem_if         u_miff(clk);
     memory_ctrl    u_ctrl(u_miff);
     memory_model   u_model(u_miff);
-    tes            u_test(u_miff);
+    test            u_test(u_miff);
 
 
   endmodule // top

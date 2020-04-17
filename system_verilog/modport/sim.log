@@ -1,0 +1,34 @@
+# vsim -do {log -r * ; run -all; quit -f} -l sim.log -c -novopt top 
+# //  Questa Sim-64
+# //  Version 10.2c linux_x86_64 Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Refreshing /home/zhouwt/EECS_Verification1906-master/system_verilog/modport/work.top
+# Loading sv_std.std
+# Loading work.top
+# Refreshing /home/zhouwt/EECS_Verification1906-master/system_verilog/modport/work.mem_if
+# Loading work.mem_if
+# Refreshing /home/zhouwt/EECS_Verification1906-master/system_verilog/modport/work.memory_ctrl
+# Loading work.memory_ctrl
+# Refreshing /home/zhouwt/EECS_Verification1906-master/system_verilog/modport/work.memory_model
+# Loading work.memory_model
+# Refreshing /home/zhouwt/EECS_Verification1906-master/system_verilog/modport/work.test
+# Loading work.test
+# log -r *  
+#  run -all 
+# @150ns Writing address 0 with data 24
+# @230ns Writing address 1 with data 81
+# @310ns Writing address 2 with data 9
+# @390ns Writing address 3 with data 63
+# @690ns Reading address 0, Got data 24
+# @770ns Reading address 1, Got data 81
+# @850ns Reading address 2, Got data 9
+# @930ns Reading address 3, Got data 63
+# ** Note: $finish    : modport.sv(178)
+#    Time: 940 ns  Iteration: 1  Instance: /top/u_test

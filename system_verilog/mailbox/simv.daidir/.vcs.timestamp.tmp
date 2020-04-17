@@ -1,0 +1,83 @@
+0 
+24
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/opt/synopsys/vcsmx201509/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /opt/synopsys/vcsmx201509/linux64/lib/libvirsim.so /opt/synopsys/vcsmx201509/linux64/lib/liberrorinf.so /opt/synopsys/vcsmx201509/linux64/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/opt/synopsys/vcsmx201509/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/opt/synopsys/vcsmx201509/include
+-Xvcs_run_simv=1
+-gen_obj
+-l
+-picarchive
+-sverilog
+/opt/synopsys/vcsmx201509/linux64/bin/vcs1
+mailbox.sv
+sim.log
+48
+sysc_uni_pwd=/home/zhouwt/EECS_Verification1906-master/system_verilog/mailbox
+XDG_MENU_PREFIX=xfce-
+XDG_DATA_DIRS=/usr/local/share:/usr/share
+XDG_CONFIG_DIRS=/etc/xdg
+XA_GCC=/usr/bin/gcc
+VNCDESKTOP=helium3:4 (zhouwt)
+VMR_MODE_FLAG=32
+VG_GNU_PACKAGE=/opt/synopsys/vcsmx201509/gnu/linux
+VERDI_HOME=/opt/synopsys/verdi201509
+VCS_TARGET_ARCH=amd64
+VCS_MX_HOME_INTERNAL=1
+VCS_LOG_FILE=sim.log
+VCS_HOME=/opt/synopsys/vcsmx201509
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/opt/synopsys/vcsmx201509/linux64
+SSH_AUTH_SOCK=/tmp/gpg-36zMEw/S.gpg-agent.ssh
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AGENT_PID=23302
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/23319,unix/unix:/tmp/.ICE-unix/23319
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+OVA_UUM=0
+MGLS_LICENSE_FILE=1717@helium3
+MGC_HOME=/opt/mentor
+MGC_AMS_HOME=/opt/mentor/ams121
+LIBGLADE_MODULE_PATH=:
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+HSIM_HOME=/opt/synopsys/hsim201506/hsimplus
+HSIM_64=1
+HISTCONTROL=ignoredups
+G_BROKEN_FILENAMES=1
+GPG_AGENT_INFO=/tmp/gpg-4Ps1Qn/S.gpg-agent:23302:1
+GLADE_PIXMAP_PATH=:
+GLADE_MODULE_PATH=:
+GLADE_CATALOG_PATH=:
+DESKTOP_SESSION=xfce
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-EVWQZrSCyh,guid=fba217136c74d0003f22731f00054019
+CVS_RSH=ssh
+COLORTERM=Terminal
+CALIBRE_HOME=/opt/mentor/ixl_cal_2013.2_35.25
+0
+1
+1586613360 mailbox.sv
+4
+0 
+1469159069 /opt/synopsys/vcsmx201509/linux64/lib/libvirsim.so
+1469158567 /opt/synopsys/vcsmx201509/linux64/lib/liberrorinf.so
+1469158547 /opt/synopsys/vcsmx201509/linux64/lib/libsnpsmalloc.so

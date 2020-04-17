@@ -1,0 +1,51 @@
+Command: vcs -R -sverilog mailbox.sv -l sim.log
+                         Chronologic VCS (TM)
+      Version K-2015.09-SP2-4_Full64 -- Sat Apr 11 21:56:03 2020
+               Copyright (c) 1991-2015 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file 'mailbox.sv'
+Top Level Modules:
+       tb
+No TimeScale specified
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+	However, due to incremental compilation, only 1 module needs to be compiled.
+recompiling module tb because:
+	This module or some inlined child module(s) has/have been modified.
+rm -f _csrc*.so linux64_scvhdl_*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv   -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ \
+-Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  -rdynamic   objs/amcQw_d.o   _19784_archive_1.so \
+_prev_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o          /opt/synopsys/vcsmx201509/linux64/lib/libzerosoft_rt_stubs.so \
+/opt/synopsys/vcsmx201509/linux64/lib/libvirsim.so /opt/synopsys/vcsmx201509/linux64/lib/liberrorinf.so \
+/opt/synopsys/vcsmx201509/linux64/lib/libsnpsmalloc.so    /opt/synopsys/vcsmx201509/linux64/lib/libvcsnew.so \
+/opt/synopsys/vcsmx201509/linux64/lib/libsimprofile.so /opt/synopsys/vcsmx201509/linux64/lib/libuclinative.so \
+-Wl,-whole-archive /opt/synopsys/vcsmx201509/linux64/lib/libvcsucli.so -Wl,-no-whole-archive \
+/opt/synopsys/vcsmx201509/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread \
+-ldl 
+../simv up to date
+Command: ./simv -a sim.log
+Chronologic VCS simulator copyright 1991-2015
+Contains Synopsys proprietary information.
+Compiler version K-2015.09-SP2-4_Full64; Runtime version K-2015.09-SP2-4_Full64;  Apr 11 21:56 2020
+[1] Thread0: Put item #0, size=1
+[2] Thread1:Got item #0, size=0
+[2] Thread0: Put item #1, size=1
+[3] Thread0: Put item #2, size=2
+[4] Thread1:Got item #1, size=1
+[4] Thread0: Put item #3, size=2
+[6] Thread1:Got item #2, size=2
+[6] Thread0: Put item #4, size=2
+[8] Thread1:Got item #3, size=1
+[10] Thread1:Got item #4, size=0
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 12
+CPU Time:      0.420 seconds;       Data structure size:   0.0Mb
+Sat Apr 11 21:56:05 2020
+CPU time: .162 seconds to compile + .019 seconds to elab + .198 seconds to link + .622 seconds in simulation

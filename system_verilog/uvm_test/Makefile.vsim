@@ -1,0 +1,65 @@
+seed=random
+tool_path=/opt/mentor
+#batch=-c
+batch=-gui
+UVM_PHASE_TRACE=+UVM_PHASE_TRACE
+UVM_OBJECTION_TRACE=
+UVM_NO_DEPRECATED=
+UVM_CONFIG_DB_TRACE=+UVM_CONFIG_DB_TRACE
+all: compile run
+
+UVM_HOME = ../../uvm-1.2
+UVM_VERBOSITY=UVM_DEBUG
+RTL =../rtl
+FL_TB = ../tb
+TC= top_test
+
+GCC     =$(tool_path)/questasim/gcc-4.5.0-linux_x86_64/bin/gcc
+MTI_HOME=$(tool_path)/questasim
+DEBUG   =$(MTI_HOME)/verilog_src/questa_uvm_pkg-1.2/src
+BITS    =64
+DPI_SRC =$(UVM_HOME)/src/dpi/uvm_dpi.cc
+LIBDIR  =$(UVM_HOME)/lib
+LIBNAME =uvm_dpi
+
+GCCCMD  =$(GCC) -m$(BITS) -fPIC -DQUESTA -g -W -shared -x c -I$(MTI_HOME)/include $(DPI_SRC) -o $(LIBDIR)/$(LIBNAME).so
+
+DPILIB_VSIM_OPT = -sv_lib $(LIBDIR)/uvm_dpi
+dpi_lib:
+	mkdir -p $(LIBDIR)
+	$(GCCCMD)
+work:
+	if [ -d work ]  ;then rm -rf work; fi
+	vlib work
+rtlvlog:
+	vlog -f ../rtl/fixed.f -v ../stdlib/Core/verilog/verilog_udp.v -v ../stdlib/Core/verilog/verilog.v \
+                        -v ../stdlib/IO/verilog/verilog_udp.v   -v ../stdlib/IO/verilog/verilog.v
+build:
+	vlog +define+UVM_NO_DEPRECATED  +incdir+$(UVM_HOME)/src  $(UVM_HOME)/src/uvm.sv +acc \
+	+incdir+../top/sv \
+	+incdir+../top_test/sv \
+	+incdir+../top_tb \
+	+incdir+../rtl \
+        +incdir+../tb/Analog/sv \
+        +incdir+../tb/top_test/sv \
+	../tb/Analog/sv/Analog_pkg.sv 	-timescale 1ns/1ps \
+	../tb/Analog/sv/Analog_bfm.sv 	-timescale 1ns/1ps \
+	../top/sv/top_pkg.sv 	        -timescale 1ns/1ps \
+	../top_test/sv/top_test_pkg.sv 	-timescale 1ns/1ps \
+	../top_tb/top_tb.sv 	        -timescale 1ns/1ps -l compile.log
+
+run:
+	vsim $(DPILIB_VSIM_OPT) -t 1fs +nospecify -assertcover -assertdebug -coverage -sva \
+  -classdebug -msgmode both -uvmcontrol=all -l ./$(TC).log -cvgperinstance -cvgmergeinstances \
+  -sv_seed $(seed) $(batch) -do "set SolveArrayResizeMax 0;log -r /*;coverage save -onexit \
+  $(TC).ucdb; run -all;atv log -enable ./;" -voptargs="+acc" top_tb +UVM_TESTNAME=$(TC) \
+  +UVM_VERBOSITY=$(UVM_VERBOSITY)  $(UVM_CONFIG_DB_TRACE)  $(UVM_PHASE_TRACE) $(UVM_OBJECTION_TRACE)  $(UVM_NO_DEPRECATED) &
+
+compile: dpi_lib work rtlvlog build
+        #+incdir+$(DEBUG)   $(DEBUG)/questa_uvm_pkg.sv \ #
+clean:
+	rm -rf $(LIBDIR) *.ucdb *.wlf  *.DUMP *.log  novas* transcript work *.wlf  ./certe_dump.xm \
+        rm -rf work simv.vdb *.vpd *.txt *.fsdb *.vcd *~ *verdi*
+
+view:
+	verdi +v2k -sverilog +incdir+$(UVM_HOME) -f ../rtl/fixed.f  ../top_tb/top_tb.sv

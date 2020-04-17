@@ -1,0 +1,127 @@
+{
+    "MlibObjs": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 57312,
+        "archive": "archive.3/_19784_archive_1.a"
+    },
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "bytes": 28622,
+                "mod": "std",
+                "archive": "archive.3/_prev_archive_1.a",
+                "mode": 4,
+                "checksum": 4294967295,
+                "out": "reYIK_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7287,
+                "mod": "...MASTER...",
+                "out": "objs/amcQw_d.o",
+                "mode": 4,
+                "checksum": 4294967295
+            }
+        },
+        "tb": {
+            "g7hgQ_d": {
+                "bytes": 15681,
+                "mod": "tb",
+                "out": "g7hgQ_d.o",
+                "archive": "archive.3/_19784_archive_1.a",
+                "mode": 4,
+                "checksum": 4294967295
+            }
+        }
+    },
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "tb": [
+            "tb",
+            "g7hgQ",
+            "module"
+        ]
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "std",
+        "tb"
+    ],
+    "CompileStrategy": "fullobj",
+    "stat": {
+        "nQuads": 122,
+        "ru_self_cgstart": {
+            "ru_utime_sec": 0.071999999999999995,
+            "ru_nivcsw": 151,
+            "ru_stime_sec": 0.024,
+            "ru_maxrss_kb": 79148,
+            "ru_majflt": 0,
+            "ru_minflt": 4009,
+            "ru_nvcsw": 138
+        },
+        "ru_childs_cgstart": {
+            "ru_utime_sec": 0.0,
+            "ru_nivcsw": 0,
+            "ru_stime_sec": 0.0,
+            "ru_maxrss_kb": 0,
+            "ru_majflt": 0,
+            "ru_minflt": 0,
+            "ru_nvcsw": 0
+        },
+        "ru_childs_end": {
+            "ru_utime_sec": 0.0,
+            "ru_nivcsw": 0,
+            "ru_stime_sec": 0.0,
+            "ru_maxrss_kb": 0,
+            "ru_majflt": 0,
+            "ru_minflt": 0,
+            "ru_nvcsw": 0
+        },
+        "nMops": 199,
+        "outputSizePerQuad": 660.0,
+        "totalObjSize": 80638,
+        "ru_self_end": {
+            "ru_utime_sec": 0.087999999999999995,
+            "ru_nivcsw": 169,
+            "ru_stime_sec": 0.031,
+            "ru_maxrss_kb": 86052,
+            "ru_majflt": 0,
+            "ru_minflt": 5013,
+            "ru_nvcsw": 176
+        },
+        "CodeGen(%)": 18.181818181818183,
+        "mopSpeed": 12437.5,
+        "quadSpeed": 7625.0,
+        "Frontend(%)": 81.818181818181813,
+        "mop/quad": 1.6311475409836065
+    },
+    "CompileStatus": "Successful",
+    "CurCompileUdps": {},
+    "LVLData": [
+        "SIM"
+    ],
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.19784.json"
+    ],
+    "Misc": {
+        "cwd": "/home/zhouwt/EECS_Verification1906-master/system_verilog/mailbox",
+        "archive_dir": "archive.3",
+        "csrc": "csrc",
+        "daidir": "simv.daidir",
+        "csrc_abs": "/home/zhouwt/EECS_Verification1906-master/system_verilog/mailbox/csrc",
+        "daidir_abs": "/home/zhouwt/EECS_Verification1906-master/system_verilog/mailbox/simv.daidir",
+        "default_output_dir": "csrc"
+    }
+}
